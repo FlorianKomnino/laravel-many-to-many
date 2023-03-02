@@ -18,11 +18,11 @@ class TechnologiesTableSeeder extends Seeder
     {
         $technologies = ['HTML5', 'CSS3', 'JS ES6', 'PHP', 'Vue 3', 'Laravel 9', 'Bootstrap 5', 'Vite', 'Composer', 'Node.js', 'SCSS', 'React', 'Angular.js', 'C', 'C++', 'Python'];
 
-        foreach ($technologies as $technologie) {
-            $newTechnologie = new Technology();
-            $newTechnologie->name = $technologie;
-            $newTechnologie->color = $faker->unique()->hexColor();
-            $newTechnologie->save();
+        foreach ($technologies as $technology) {
+            $newTechnology = new Technology();
+            $newTechnology->name = $technology;
+            $newTechnology->color = $faker->unique()->hexColor();
+            $newTechnology->save();
         }
     }
 }
