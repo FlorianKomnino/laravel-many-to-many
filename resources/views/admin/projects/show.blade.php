@@ -6,7 +6,19 @@
         <div class="col-12">
             <div class="card text-center">
                 <div class="card-header">
-                    {{$project->title}}
+                    <div class="card-title">
+                        <h3>
+                            {{$project->title}}
+                        </h3>
+                    </div>
+                    <div class="card-subtitle">
+                        @foreach ($project->technologies as $technology)
+                            <span class="p-2 badge rounded-pill"
+                            style="color: {{ $technology->color }}"> 
+                                #{{ $technology->name }}
+                            </span>
+                        @endforeach
+                    </div>
                 </div>
 
                 <div class="card-image mt-3">
